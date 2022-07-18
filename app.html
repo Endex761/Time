@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Time</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="bootstrap.bundle.min.js"></script>
+        <script src="app.js"></script>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕔</text></svg>">
+    </head>
+    <body onload="app.loadState(window.localStorage);">
+        <div class="container-fluid p-2 bg-primary text-white text-center">
+            <h1>Time</h1>
+            <p>Calcola a che ora uscirai!</p>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+              <div class="col-sm-4">
+                <h3>Tempo dovuto <span id="tempoDovuto">8:00</span></h3>
+              </div>
+              <div class="col-sm-4">
+                <h3>Tempo rimanente <span id="tempoRimanente" style="color:green">8:00</span><span id=""></span></h3>
+              </div>
+              <div class="col-sm-4">
+                <h3>Orario uscita <span id="orarioUscita">16:00</span></h3>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-4">
+                <h3>Entrata</h3>
+                <label for="entrata" class="form-label">Ora di ingresso</label>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" id="entrata" placeholder="--:--" name="entrata" onchange="impostaEntrata(false); app.saveState(window.localStorage);">
+                  <button type="button" class="btn btn-outline-primary"onclick="impostaEntrata(true);app.saveState(window.localStorage);">Ora</button>
+                </div>
+                <br>
+                <div class="col">
+                  <button type="button" class="btn btn-primary float-end" onclick="app.resetState(window.localStorage)">Reset</button>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <h3>Timbratura Non Valorizzata</h3>
+                <label for="uscitaTNV" class="form-label">Uscita</label>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" id="uscitaTNV" placeholder="--:--" name="uscitaTNV" onchange="impostaUscitaTNV(false); app.saveState(window.localStorage);">
+                  <button type="button" class="btn btn-outline-primary"onclick="impostaUscitaTNV(true);app.saveState(window.localStorage);">Ora</button>
+                </div>
+                <label for="rientroTNV" class="form-label">Rientro</label>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" id="rientroTNV" placeholder="--:--" name="rientroTNV" onchange="impostaRientroTNV(false); app.saveState(window.localStorage);">
+                  <button type="button" class="btn btn-outline-primary"onclick="impostaRientroTNV(true);app.saveState(window.localStorage);">Ora</button>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <h3>Pausa Pranzo</h3>
+                <label for="uscitaPranzo" class="form-label">Uscita</label>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" id="uscitaPranzo" placeholder="--:--" name="uscitaPranzo" onchange="impostaUscitaPranzo(false); app.saveState(window.localStorage);">
+                  <button type="button" class="btn btn-outline-primary"onclick="impostaUscitaPranzo(true);app.saveState(window.localStorage);">Ora</button>
+                </div>
+                <label for="rientroPranzo" class="form-label">Rientro</label>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" id="rientroPranzo" placeholder="--:--" name="rientroPranzo" onchange="impostaRientroPranzo(false); app.saveState(window.localStorage);">
+                  <button type="button" class="btn btn-outline-primary"onclick="impostaRientroPranzo(true);app.saveState(window.localStorage);">Ora</button>
+                </div>
+              </div>
+            </div>   
+    </body>
+</html>
