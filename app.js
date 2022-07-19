@@ -36,8 +36,11 @@ class TimeInterval {
     }
 
     fromString(timeString) {
-        if(timeString == null)
+        if(timeString == null || timeString == ""){
+            this.minutes = 0;
             return;
+        }
+
         let split  = timeString.split(":");
         let hour   = parseInt(split[0]);
         let minute = parseInt(split[1]);
