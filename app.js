@@ -202,7 +202,7 @@ function updateUI() {
     document.getElementById("rientroPranzo").value = app.rientroPranzo.minutes === 0 ? "" : app.rientroPranzo.toString();
 }
 
-function autocomplete(input) {
+function autocompleteTime(input) {
     let time = input.value;
     time = time.replace(":", "");
     
