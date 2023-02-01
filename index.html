@@ -31,7 +31,7 @@
                 <h3>Entrata</h3>
                 <label for="entrata" class="form-label">Ora di ingresso</label>
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" id="entrata" placeholder="--:--" name="entrata" onchange="impostaEntrata(false); app.saveState(window.localStorage);">
+                  <input type="text" class="form-control" id="entrata" placeholder="--:--" name="entrata" onkeydown="autocomplete(this);" onchange="impostaEntrata(false); app.saveState(window.localStorage);">
                   <button type="button" class="btn btn-outline-primary"onclick="impostaEntrata(true);app.saveState(window.localStorage);">Ora</button>
                 </div>
                 <br>
@@ -43,12 +43,12 @@
                 <h3>Timbratura Non Valorizzata</h3>
                 <label for="uscitaTNV" class="form-label">Uscita</label>
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" id="uscitaTNV" placeholder="--:--" name="uscitaTNV" onchange="impostaUscitaTNV(false); app.saveState(window.localStorage);">
+                  <input type="text" class="form-control" id="uscitaTNV" placeholder="--:--" name="uscitaTNV" onkeydown="autocomplete(this);" onchange="impostaUscitaTNV(false); app.saveState(window.localStorage);">
                   <button type="button" class="btn btn-outline-primary"onclick="impostaUscitaTNV(true);app.saveState(window.localStorage);">Ora</button>
                 </div>
                 <label for="rientroTNV" class="form-label">Rientro</label>
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" id="rientroTNV" placeholder="--:--" name="rientroTNV" onchange="impostaRientroTNV(false); app.saveState(window.localStorage);">
+                  <input type="text" class="form-control" id="rientroTNV" placeholder="--:--" name="rientroTNV" onkeydown="autocomplete(this);" onchange="impostaRientroTNV(false); app.saveState(window.localStorage);">
                   <button type="button" class="btn btn-outline-primary"onclick="impostaRientroTNV(true);app.saveState(window.localStorage);">Ora</button>
                 </div>
               </div>
@@ -56,12 +56,12 @@
                 <h3>Pausa Pranzo</h3>
                 <label for="uscitaPranzo" class="form-label">Uscita</label>
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" id="uscitaPranzo" placeholder="--:--" name="uscitaPranzo" onchange="impostaUscitaPranzo(false); app.saveState(window.localStorage);">
+                  <input type="text" class="form-control" id="uscitaPranzo" placeholder="--:--" name="uscitaPranzo" onkeydown="autocomplete(this);" onchange="impostaUscitaPranzo(false); app.saveState(window.localStorage);">
                   <button type="button" class="btn btn-outline-primary"onclick="impostaUscitaPranzo(true);app.saveState(window.localStorage);">Ora</button>
                 </div>
                 <label for="rientroPranzo" class="form-label">Rientro</label>
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" id="rientroPranzo" placeholder="--:--" name="rientroPranzo" onchange="impostaRientroPranzo(false); app.saveState(window.localStorage);">
+                  <input type="text" class="form-control" id="rientroPranzo" placeholder="--:--" name="rientroPranzo" onkeydown="autocomplete(this);" onchange="impostaRientroPranzo(false); app.saveState(window.localStorage);">
                   <button type="button" class="btn btn-outline-primary"onclick="impostaRientroPranzo(true);app.saveState(window.localStorage);">Ora</button>
                 </div>
               </div>
