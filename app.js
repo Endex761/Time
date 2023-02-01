@@ -272,6 +272,22 @@ function repeatEvery(func, interval) {
     setTimeout(start, delay);
 }
 
+function autocomplete(input) {
+    let time = input.value;
+    time = time.replace(":", "");
+    
+    function inner(time) {
+        if(time.length <3)
+            return time;
+
+   	    if(time.length >= 4)
+            return `${time[0]}${time[1]}:${time[2]}${time[3]}`;
+    
+        return `${time[0]}:${time[1]}${time[2]}`;
+    }
+     input.value = inner(time);
+}
+
 // this function is runned when each minute change
 repeatEvery(() => {
     if(!app.started)
