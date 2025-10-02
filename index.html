@@ -31,7 +31,7 @@
                 <h3>Entrata</h3>
                 <label for="entrata" class="form-label">Ora di ingresso</label>
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" id="entrata" placeholder="--:--" name="entrata" onkeyup="autocompleteTime(this);" onchange="impostaEntrata(false); app.saveState(window.localStorage);">
+                  <input type="text" class="form-control" id="entrata" placeholder="--:--" name="entrata" onchange="impostaEntrata(false); app.saveState(window.localStorage);">
                   <button type="button" class="btn btn-outline-primary"onclick="impostaEntrata(true);app.saveState(window.localStorage);">Ora</button>
                 </div>
                 <br>
